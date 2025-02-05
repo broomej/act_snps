@@ -9,8 +9,7 @@ ACT=${ACT[@]}
 
 parallel mkdir -p by_chr/{} ::: $ACT
 
-
-parallel --dry-run ./query_snps.sh \
+parallel -j 6 ./query_snps.sh \
     /Users/jaibroome/Data/ACT1_3_topmed/{1}/TOPMEDr2/vcffile/chr{2}.dose.filtered.vcf.gz \
     by_chr/{1}/chr{2}.snps.txt \
     ::: $ACT ::: $(echo {1..22} X)
