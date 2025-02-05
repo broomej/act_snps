@@ -1,0 +1,2 @@
+ACT 1 and 3 were genotyped on different platforms, so calculating missing statistics on the whole set throws things off.
+Filter the combined set on the ACT1/ACT3 SNPs to calculate per-cohort missing statistics.
